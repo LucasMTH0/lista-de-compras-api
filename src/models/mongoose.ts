@@ -4,27 +4,27 @@ export async function initializeMongoDB(){
     return await mongoose.connect(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@lista-de-compras.xjm3a.mongodb.net/?retryWrites=true&w=majority&appName=lista-de-compras`)
 }
 
-export const Product = mongoose.model('Product', {
+export const ProductModel = mongoose.model('Product', {
     id: Number,
     name: String,
-    link: String,
-    photo: String,
+    url: String,
+    image: String,
     price: String,
-    userId: Number,
-    listId: Number,
+    userId: String,
+    listId: String,
     priority: String,
     category: String,
     status: Boolean,
     createdAt: Date,
 })
 
-export const List = mongoose.model('List', {
+export const ListModel = mongoose.model('List', {
     name: String,
     description: String,
     idUser: String
 })
 
-export const User = mongoose.model('User', {
+export const UserModel = mongoose.model('User', {
     name: String,
     email: String,
     password: String

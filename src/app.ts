@@ -1,6 +1,4 @@
 require('dotenv/config');
-import userRoutes from "./routes/User";
-import listRoutes from "./routes/List";
 
 const express = require('express');
 const cors = require('cors');
